@@ -1,0 +1,5 @@
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+export const LOGIN_FAILURE = 'LOGIN_FAILURE'
+export const STORE_DATA = 'STORE_DATA'
+export const AUTH_LOGOUT = 'AUTH_LOGOUT'
+export const CP_MESSAGE = 'CP_MESSAGE'
