@@ -6,7 +6,8 @@ export const globalStyles = StyleSheet.create({
         position: 'relative',
         textAlign: "center",
         padding: 10,
-        paddingBottom: 50
+        paddingBottom: 50,
+        backgroundColor: '#ebebeb'
     },
     loginText: {
         //color: "#fff",
@@ -22,6 +23,12 @@ export const globalStyles = StyleSheet.create({
         flexWrap: "wrap",
         alignItems: "center",
         justifyContent: "center"
+    },
+    textAlignCenter: {
+        flex: 1,
+        flexDirection: 'row',
+        textAlign: 'center',
+        justifyContent: 'center'
     },
     
     
@@ -108,13 +115,25 @@ export const globalStyles = StyleSheet.create({
         height: 250
       },
       generalBtn: {
-        backgroundColor: "#265985",
+        backgroundColor: "#ff6a00",
+        //borderColor: "#ff6a00",
+        //borderWidth: 1,
         padding: 5,
         textAlign: "center",
         alignItems: "center",
         borderRadius: 5,
         margin: 5,
-        minHeight: 30
+        minHeight: 30,
+        color: "#000"
+      },
+      generalLoginBtn: {
+        backgroundColor: "#ff6a00",
+        padding: 15,
+        textAlign: "center",
+        alignItems: "center",
+        borderRadius: 5,
+        margin: 5,
+        minHeight: 50
       },
       generalBtnText: {
           color: "#ffffff"

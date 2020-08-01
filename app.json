@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "kmhss school App",
-    "slug": "KMHSS",
+    "name": "Bhokkali App",
+    "slug": "BHOKKALI",
     "privacy": "public",
-    "sdkVersion": "34.0.0",
+    "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
       "android",
@@ -14,17 +14,23 @@
     "icon": "./assets/images/icon.png",
     "splash": {
       "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff",
+      "resizeMode": "cover"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
-      "**/*"
+      "assets/**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.Bhokkali.bhokkali",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.Bhokkali.bhokkali",
+      "versionCode": 1
     }
   }
 }

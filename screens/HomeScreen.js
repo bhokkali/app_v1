@@ -17,6 +17,7 @@ import { schoolLogin, removeFailureMessage, storeAuthData } from '../store/Auth/
 import { isEmpty, retrieveData  } from '../helper/helper'
 import Dashboard from './Dashboard'
 import Footer from '../components/Footer'
+import { globalStyles } from './ScreenStyles'
 
 export class HomeScreen extends React.Component {
 
@@ -33,8 +34,6 @@ export class HomeScreen extends React.Component {
 
   render() {
     const { schoolLogin, authInfo, loginFailureMessage, removeFailureMessage } = this.props
-    console.log('authInfo <><<')
-    console.log(authInfo)
     const dispContainer = isEmpty(authInfo) ? styles.container1 : styles.container2
     return (
       <View style={dispContainer}>
@@ -50,10 +49,14 @@ export class HomeScreen extends React.Component {
                 removeFailureMessage={removeFailureMessage}
               />
             )}
+            {!isEmpty(authInfo) &&
+              <View style={globalStyles.footerBlank}><Text></Text></View>
+            }
         </ScrollView>
         {!isEmpty(authInfo) &&
           <Footer {...this.props} />
         }
+        
       </View>
     )
   }
@@ -66,11 +69,12 @@ HomeScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container1: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ebebeb',
     color: "#000"
   },
   container2: {
     flex: 1,
+    backgroundColor: '#ebebeb',
     color: "#fff"
   },
   developmentModeText: {

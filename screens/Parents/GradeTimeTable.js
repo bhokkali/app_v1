@@ -3,6 +3,7 @@ import _ from 'lodash'
 import { ScrollView, StyleSheet, View, Text } from 'react-native';
 import { globalStyles } from '../ScreenStyles'
 import { Col, Row, Grid } from "react-native-easy-grid";
+import { GetFormattedDate } from '../../helper/helper'
 
 export const styles = StyleSheet.create({   
   
@@ -38,7 +39,7 @@ export default class GradeTimeTable extends React.Component {
                     return (
                       <Row key={key} style={rowStyle}>
                         <Col size={3} style={globalStyles.girdColumn}><Text>{exam.subject_name}</Text></Col>
-                        <Col size={3} style={globalStyles.girdColumn}><Text>{exam.exam_date}</Text></Col>
+                        <Col size={3} style={globalStyles.girdColumn}><Text>{GetFormattedDate(exam.exam_date)}</Text></Col>
                         <Col size={2} style={globalStyles.girdColumn}><Text>{exam.time_from}</Text></Col>
                         <Col size={2} style={globalStyles.girdColumn}><Text>{exam.time_to}</Text></Col>
                         <Col size={1.5} style={globalStyles.girdColumn}><Text>{exam.max_mark}</Text></Col>

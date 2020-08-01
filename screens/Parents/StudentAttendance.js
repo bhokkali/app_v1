@@ -105,7 +105,7 @@ export class StudentAttendance extends React.Component {
         <ScrollView style={globalStyles.rootContainer}>
             <View style={styles.headContainer}>
               <View style={styles.fullDayIndicator}></View>
-              <Text style={styles.dayText}> Full Day</Text>
+              <Text style={styles.dayText}> Absent</Text>
               <View style={styles.halfDayIndicator}></View>
               <Text style={styles.dayText}> Half Day</Text>
               <View style={styles.holidayIndicator}></View>

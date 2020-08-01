@@ -9,7 +9,7 @@ import { globalStyles } from '../ScreenStyles'
 import { Col, Row, Grid } from "react-native-easy-grid";
 import { AntDesign } from '@expo/vector-icons';
 import InformationBlock from '../../components/InformationBlock'
-import { isEmpty } from '../../helper/helper'
+import { isEmpty, GetFormattedDate } from '../../helper/helper'
 import { createUpdateExamMarks } from '../../store/Teacher/actionCreator'
 
 export class AddMarksForm extends React.Component {
@@ -113,8 +113,6 @@ export class AddMarksForm extends React.Component {
     }
 
     submitMark = () => {
-        console.log('ready to submit')
-        console.log(this.state.markInfo)
         const { markInfo } = this.state
         const { navigation, listExamGradeMarks, createUpdateExamMarks } = this.props
         let sendArray = []
@@ -149,7 +147,7 @@ export class AddMarksForm extends React.Component {
         "Academic Year":navigation.getParam("academic_year"),
         "Exam Name": navigation.getParam("exam_name"),
         "Subject Name": navigation.getParam("subject_name"),
-        "Exam Date": navigation.getParam("exam_date"),
+        "Exam Date": GetFormattedDate(navigation.getParam("exam_date")),
         "Max Mark": navigation.getParam("max_mark")
        }
     const listAcademicStudents = navigation.getParam("listAcademicStudents")

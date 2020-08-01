@@ -51,8 +51,6 @@ export async function postServiceFetch(serviceName, payload) {
         let response = await fetch(postUrl, requestOptions)
             .then(async response => { 
                 let responseData = await response.json()
-                console.log('post stvice response')
-                console.log(responseData)
                 return responseData
             })
             .catch((error) => {

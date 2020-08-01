@@ -8,7 +8,7 @@ import { getExams  } from '../../store/Parents/actionCreator'
 import { Col, Row, Grid } from "react-native-easy-grid";
 import HeaderRight from '../../components/HeaderRight'
 import Footer from '../../components/Footer'
-import { getCurrentAcademicYear } from '../../helper/helper'
+import { getCurrentAcademicYear, GetFormattedDate } from '../../helper/helper'
 import InformationBlock from '../../components/InformationBlock'
 
 export class Exams extends React.Component {
@@ -59,8 +59,8 @@ export class Exams extends React.Component {
                     return (
                       <Row key={key} style={rowStyle}>
                         <Col style={globalStyles.girdColumn}><Text>{exam.exam_name}</Text></Col>
-                        <Col style={globalStyles.girdColumn}><Text>{exam.start_date}</Text></Col>
-                        <Col style={globalStyles.girdColumn}><Text>{exam.end_date}</Text></Col>
+                        <Col style={globalStyles.girdColumn}><Text>{GetFormattedDate(exam.start_date)}</Text></Col>
+                        <Col style={globalStyles.girdColumn}><Text>{GetFormattedDate(exam.end_date)}</Text></Col>
                       </Row>
                     )
                   })}

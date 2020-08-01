@@ -4,7 +4,9 @@ import {
     View,
     TextInput,
     StyleSheet,
-    TouchableOpacity
+    TouchableOpacity,
+    Image,
+    ScrollView
   } from 'react-native';
 //import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 import { AntDesign } from '@expo/vector-icons';
@@ -83,7 +85,12 @@ const styles = StyleSheet.create({
           const { mobile_no, login_pwd } = this.state
           return (
             <View style={styles.container}>
-                <Text style={styles.loginText}>Login screen</Text>
+                <ScrollView>
+                <View style={globalStyles.textAlignCenter}>
+                    <Image 
+                        source={require('../assets/images/logo.png')} 
+                    />
+                </View>
                 {//loginFailureMessage && 
                     <Text style={styles.loginFailureText}>{loginFailureMessage}</Text>
                 }
@@ -125,13 +132,14 @@ const styles = StyleSheet.create({
                 />
                 <View style={styles.btnContainer}>
                     <TouchableOpacity 
-                        style={globalStyles.generalBtn}
+                        style={globalStyles.generalLoginBtn}
                         onPress={this.handleLogin}
                     >
                         <Text style={globalStyles.generalBtnText}>Login</Text>
                     </TouchableOpacity>
                 </View>
-
+                <View style={globalStyles.keyboardBlank}><Text></Text></View>
+                </ScrollView>
             </View>
           )
       }

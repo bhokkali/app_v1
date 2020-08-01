@@ -5,7 +5,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import HeaderRight from '../components/HeaderRight'
 import Footer from '../components/Footer'
 import { getSchoolCircularList } from '../store/School/actionCreator'
-import { isEmpty } from '../helper/helper'
+import { isEmpty, GetFormattedDate } from '../helper/helper'
 import { globalStyles } from './ScreenStyles';
 
 export class Circular extends React.Component {
@@ -41,7 +41,7 @@ static navigationOptions = ({navigation}) => ({
             return (
               <View style={globalStyles.rowContainer} key={key}>
                 <Text style={globalStyles.rowTitle}>{item.circular_title}</Text>
-                <Text style={globalStyles.rowSubTitle}>{item.circular_date}</Text>
+                <Text style={globalStyles.rowSubTitle}>{GetFormattedDate(item.circular_date)}</Text>
                 <Text style={globalStyles.rowContent}>{item.circular_message}</Text>
               </View>
             )

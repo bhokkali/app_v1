@@ -11,7 +11,7 @@ import * as Constants from '../../constants/Constants'
 import { getStudentGradeAttendance } from '../../store/Teacher/actionCreator'
 import { AntDesign } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
-import { isEmpty } from '../../helper/helper'
+import { isEmpty, GetFormattedDate } from '../../helper/helper'
 
 export const styles = StyleSheet.create({   
   
@@ -87,7 +87,7 @@ export class AttendanceForm extends React.Component {
         "Student Name": navigation.getParam("student_name"),
         "Grade":navigation.getParam("grade_name"),
         "Academic Year":navigation.getParam("academic_year"),
-        "Attendance Date": navigation.getParam("absent_date"),
+        "Attendance Date": GetFormattedDate(navigation.getParam("absent_date")),
        }
 
        let btnText = "Submit"

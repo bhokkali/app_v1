@@ -34,8 +34,6 @@ export class HeaderRight extends React.Component {
       }
 
     render() { 
-        console.log('header riht')
-        console.log(this.props)
         const { modalOpenState } = this.state
         return(
             <React.Fragment>

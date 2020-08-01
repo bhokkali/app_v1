@@ -6,7 +6,7 @@ import { Calendar } from 'react-native-calendars';
 import HeaderRight from '../components/HeaderRight'
 import Footer from '../components/Footer'
 import { getSchoolCalendarList } from '../store/School/actionCreator'
-import { isEmpty } from '../helper/helper'
+import { isEmpty, GetFormattedDate } from '../helper/helper'
 import { globalStyles } from './ScreenStyles';
 
 export class CalendarScreen extends React.Component {
@@ -42,22 +42,10 @@ static navigationOptions = ({navigation}) => ({
             return (
               <View style={globalStyles.rowContainer} key={key}>
                 <Text style={globalStyles.rowTitle}>{item.event_name}</Text>
-                <Text style={globalStyles.rowSubTitle}>{item.event_date}({item.event_type})</Text>
+                <Text style={globalStyles.rowSubTitle}>{GetFormattedDate(item.event_date)}({item.event_type})</Text>
               </View>
             )
           })}
-          
-          <Calendar
-            // Collection of dates that have to be colored in a special way. Default = {}
-            markedDates={{
-                '2020-04-20': {textColor: 'green'},
-                '2020-04-22': {startingDay: true, color: 'green'},
-                '2020-04-23': {selected: true, endingDay: true, color: 'green', textColor: 'gray'},
-                '2020-05-04': {disabled: true, startingDay: true, color: 'green', endingDay: true}
-            }}
-            // Date marking style [simple/period/multi-dot/custom]. Default = 'simple'
-            markingType={'period'}
-        />
         <View style={globalStyles.footerBlank}><Text></Text></View>
         </ScrollView>
         <Footer {...this.props} />

@@ -5,6 +5,7 @@ import { globalStyles } from '../ScreenStyles'
 import { Col, Row, Grid } from "react-native-easy-grid";
 import { AntDesign } from '@expo/vector-icons';
 import ModalComponent from '../../components/ModalComponent'
+import { GetFormattedDate } from '../../helper/helper'
 
 export const styles = StyleSheet.create({   
   
@@ -73,7 +74,7 @@ export default class SelectTimeTable extends React.Component {
                     return (
                       <Row key={key} style={rowStyle}>
                         <Col size={2} style={globalStyles.girdColumn}><Text>{exam.subject_name}</Text></Col>
-                        <Col size={2} style={globalStyles.girdColumn}><Text>{exam.exam_date}</Text></Col>
+                        <Col size={2} style={globalStyles.girdColumn}><Text>{GetFormattedDate(exam.exam_date)}</Text></Col>
                         <Col size={2} style={globalStyles.girdColumn}>
                           {marksObj.length > 0 &&
                             <AntDesign name="checkcircle" size={10} color="green" />

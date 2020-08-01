@@ -12,6 +12,7 @@ import { globalStyles } from './ScreenStyles'
 import HeaderRight from '../components/HeaderRight'
 import Footer from '../components/Footer'
 import InformationBlock from '../components/InformationBlock'
+import { GetFormattedDate } from '../helper/helper'
 
 export const styles = StyleSheet.create({   
   btnBlock: {
@@ -56,7 +57,7 @@ export const styles = StyleSheet.create({
             "Mobile Number":authInfo.mobile_no,
             "Aadhar Number":authInfo.aadhar_no,
             "Address": authInfo.address,
-            "Join Date": authInfo.joining_date,
+            "Join Date": GetFormattedDate(authInfo.joining_date),
             "Status":authInfo.status
           }
         }

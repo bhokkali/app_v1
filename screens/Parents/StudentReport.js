@@ -11,8 +11,6 @@ export const styles = StyleSheet.create({
 
 export default function StudentReport(props) {
   const { studentExamReport, examName} = props
-  console.log('studentExamReport <><>')
-  console.log(studentExamReport)
     
     const { exam_report_dto, exam_marks_dto_list } = studentExamReport
     return (

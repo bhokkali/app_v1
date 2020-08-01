@@ -70,9 +70,6 @@ export class AddAttendance extends React.Component {
         "Academic Year":navigation.getParam("academic_year")
        }
     const academicStudents = navigation.getParam('listAcademicStudents')
-
-    console.log('attendanceMessage <>')
-    console.log(attendanceMessage)
    
     return (
       <React.Fragment>

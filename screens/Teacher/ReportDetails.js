@@ -9,7 +9,7 @@ import Footer from '../../components/Footer'
 import { getExamReport  } from '../../store/Parents/actionCreator'
 import InformationBlock from '../../components/InformationBlock'
 import StudentReport from '../../screens/Parents/StudentReport'
-import { isEmpty } from '../../helper/helper'
+import { isEmpty, GetFormattedDate } from '../../helper/helper'
 
 export class ReportDetails extends React.Component {
     constructor(props) {
@@ -19,10 +19,6 @@ export class ReportDetails extends React.Component {
 
    static getDerivedStateFromProps(props, state) {
 
-    console.log('derived .... start')
-    console.log(props.navigation.getParam('student_id'))
-    console.log(props.studentExamReport)
-    console.log('derived .... end')
        if(isEmpty(props.studentExamReport) || props.studentExamReport.student_id !== props.navigation.getParam('student_id')) {
             props.getExamReport(
                 props.navigation.getParam('exam_id'), 
@@ -48,8 +44,8 @@ export class ReportDetails extends React.Component {
         "Grade":navigation.getParam("grade_name"),
         "Academic Year":navigation.getParam("academic_year"),
         "Exam Name": navigation.getParam("exam_name"),
-        "Exam Start Date": navigation.getParam("exam_start_date"),
-        "Exam End Date": navigation.getParam("exam_end_date"),
+        "Exam Start Date": GetFormattedDate(navigation.getParam("exam_start_date")),
+        "Exam End Date": GetFormattedDate(navigation.getParam("exam_end_date")),
         "Student Name": navigation.getParam("student_name")
        }
     return (

@@ -7,6 +7,7 @@ import HeaderRight from '../../components/HeaderRight'
 import Footer from '../../components/Footer'
 import { Col, Row, Grid } from "react-native-easy-grid";
 import InformationBlock from '../../components/InformationBlock'
+import { GetFormattedDate } from '../../helper/helper'
 
 export default class StudentsExamReport extends React.Component {
     
@@ -33,8 +34,8 @@ export default class StudentsExamReport extends React.Component {
         "Grade":navigation.getParam("grade_name"),
         "Academic Year":navigation.getParam("academic_year"),
         "Exam Name": navigation.getParam("exam_name"),
-        "Exam Start Date": navigation.getParam("exam_start_date"),
-        "Exam End Date": navigation.getParam("exam_end_date")
+        "Exam Start Date": GetFormattedDate(navigation.getParam("exam_start_date")),
+        "Exam End Date": GetFormattedDate(navigation.getParam("exam_end_date"))
        }
     const listAcademicStudents = navigation.getParam('listAcademicStudents')
     return (

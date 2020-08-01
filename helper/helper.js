@@ -17,8 +17,7 @@ export async function storeData(key, value) {
 
 export async function retrieveData(key) {
     const value = await AsyncStorage.getItem(key);
-    console.log('async value')
-    console.log(value)
+    
     if (value !== null) {
         // We have data!!
         return value
@@ -28,9 +27,7 @@ export async function retrieveData(key) {
 
 export async function removeData(key) {
     try {
-        console.log('ready to remvove')
         await AsyncStorage.removeItem(key);
-        console.log('removed')
         return true;
       } catch (error) {
         return false;
@@ -83,4 +80,12 @@ export function getCurrentDate() {
   month = month < 10 ? "0"+month : month
   let retDate = year+"-"+month+"-"+day
   return retDate
+}
+
+export function GetFormattedDate(date) {
+  var todayTime = new Date(date);
+  var month = todayTime .getMonth() + 1
+  var day = todayTime .getDate();
+  var year = todayTime .getFullYear();
+  return day + "/" + month + "/" + year;
 }

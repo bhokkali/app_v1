@@ -4,11 +4,13 @@ import { bindActionCreators } from 'redux'
 import {
     Text,
     View,
+    Image
   } from 'react-native';
 import { getParentStudents, removeStudentDetails } from '../store/Parents/actionCreator'
 import { getTeacherGrades } from '../store/Teacher/actionCreator'
 import { globalStyles } from './ScreenStyles'
 import DashboardBlock from '../components/DashboardBlock'
+import logo from '../assets/images/logo.png'
 
 export class DashboardScreen extends React.Component {
       constructor (props) {
@@ -39,7 +41,12 @@ export class DashboardScreen extends React.Component {
           
           return (
             <View style={globalStyles.rootContainer}>
-                {(authInfo.login_as === 'Patent') &&
+                <View style={globalStyles.textAlignCenter}>
+                    <Image 
+                        source={require('../assets/images/logo.png')} 
+                    />
+                </View>
+                {(authInfo.login_as === 'Parent') &&
                     <View>
                         <Text style={globalStyles.loginText}>Dear {authInfo.parent_name},</Text>
                         <Text style={globalStyles.generalContent}>
