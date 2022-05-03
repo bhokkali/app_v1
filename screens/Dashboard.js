@@ -21,6 +21,7 @@ export class DashboardScreen extends React.Component {
       }
 
       componentDidMount() {
+           
             this.props.getParentStudents(this.props.authInfo.id)
             this.props.getTeacherGrades(
                 this.props.authInfo.school_id, 
@@ -87,6 +88,25 @@ export class DashboardScreen extends React.Component {
                         iconName='barchart'
                         title='Exams'
                     />
+                    {/*<DashboardBlock
+                        onPressCB={this.dashboardNavigate}
+                        screenName='GeoLocation'
+                        iconName='barchart'
+                        title='GeoLocation'
+                    />
+                    <DashboardBlock
+                        onPressCB={this.dashboardNavigate}
+                        screenName='GeoLocation2'
+                        iconName='barchart'
+                        title='GeoLocation2'
+                    />
+                    <DashboardBlock
+                        onPressCB={this.dashboardNavigate}
+                        screenName='GeoLocation3'
+                        iconName='barchart'
+                        title='GeoLocation3'
+                    />*/}
+                    
                     {authInfo.login_as === 'Parent' &&
                     <React.Fragment>
                         {listParentStudents.map((student, key) => {

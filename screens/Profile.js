@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     static navigationOptions = ({navigation}) => {
       return ({
         headerTitle: "Profile",
-        headerRight: (
+        headerRight: () => (
           <HeaderRight navigation={navigation} />
         )
       })

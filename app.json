@@ -3,7 +3,6 @@
     "name": "Bhokkali App",
     "slug": "BHOKKALI",
     "privacy": "public",
-    "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
       "android",

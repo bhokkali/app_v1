@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Landmark 81",
+        "address": "Unnamed Road, Bhoopasandra, Hebbal Kempapura, Bengaluru, Karnataka 560024",
+        "coords": {
+          "latitude": 13.0427254,
+          "longitude": 77.5879976
+        },
+        "image_url": "https://www.vinpearl.com/landmark81/wp-content/uploads/sites/39/2018/09/VP-Luxury-Landmark-81-22-bot.jpg"
+      },
+    {
+      "name": "Madivala Police Station",
+      "address": "Madiwala Rd, Santhosapuram, 1st Block Koramangala, Koramangala, Bengaluru, Karnataka 560068",
+      "coords": {
+        "latitude": 12.9185405,
+        "longitude": 77.6197208
+      },
+      "image_url": "https://media.glassdoor.com/l/de/cd/ae/b6/the-face-shop.jpg"
+    }
+]

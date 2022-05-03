@@ -43,7 +43,7 @@ export class AddMarks extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "Add Marks",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

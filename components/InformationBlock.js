@@ -1,6 +1,5 @@
 import React from 'react'
 import { AntDesign } from '@expo/vector-icons';
-//import { TouchableOpacity } from 'react-native-gesture-handler'
 import { Col, Row, Grid } from "react-native-easy-grid";
 import {
     Text,

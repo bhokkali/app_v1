@@ -63,7 +63,7 @@ export const styles = StyleSheet.create({
     static navigationOptions = ({navigation}) => {
       return ({
         headerTitle: "Change Password",
-        headerRight: (
+        headerRight: () => (
           <HeaderRight navigation={navigation} />
         )
       })

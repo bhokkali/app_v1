@@ -32,7 +32,7 @@ export class ReportDetails extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: navigation.getParam("student_name")+"'s Report",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

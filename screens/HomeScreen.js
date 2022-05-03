@@ -63,7 +63,8 @@ export class HomeScreen extends React.Component {
 }
 
 HomeScreen.navigationOptions = {
-  header: null,
+  //header: null,
+  headerShown: false
 };
 
 const styles = StyleSheet.create({

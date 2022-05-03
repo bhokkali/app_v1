@@ -40,7 +40,7 @@ export class TeacherTimeTable extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "My Time Table",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

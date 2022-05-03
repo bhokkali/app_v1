@@ -14,7 +14,7 @@ import InformationBlock from '../../components/InformationBlock'
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "Student Dashboard",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

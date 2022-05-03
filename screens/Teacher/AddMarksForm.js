@@ -24,7 +24,7 @@ export class AddMarksForm extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
         headerTitle: "Add Marks Form",
-        headerRight: (
+        headerRight: () => (
           <HeaderRight navigation={navigation} />
         )
       })

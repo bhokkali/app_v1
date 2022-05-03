@@ -17,7 +17,7 @@ import { getAcademicStudents } from '../../store/Teacher/actionCreator'
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "Grade Dashboard",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

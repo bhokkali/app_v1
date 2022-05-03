@@ -14,7 +14,7 @@ export default class AcademicStudents extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "Academic Students",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

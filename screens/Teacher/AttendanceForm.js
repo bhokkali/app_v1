@@ -48,7 +48,7 @@ export class AttendanceForm extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "Attendance Form",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

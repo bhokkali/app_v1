@@ -28,7 +28,7 @@ componentDidMount() {
 
 static navigationOptions = ({navigation}) => ({
   headerTitle: "Calendar",
-  headerRight: (
+  headerRight: () => (
     <HeaderRight navigation={navigation} />
   )
 })

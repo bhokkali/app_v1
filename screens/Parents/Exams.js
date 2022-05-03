@@ -28,7 +28,7 @@ export class Exams extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "Exams",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

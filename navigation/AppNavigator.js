@@ -1,6 +1,6 @@
 import React from 'react';
-import { createAppContainer, createStackNavigator } from 'react-navigation';
-
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import CalendarScreen from '../screens/CalendarScreen'
 import StudentDashboard from '../screens/Parents/StudentDashboard'
 import ClassTimeTable from '../screens/Parents/ClassTimeTable'
@@ -22,6 +22,9 @@ import AddMarks from '../screens/Teacher/AddMarks'
 import AddMarksForm from '../screens/Teacher/AddMarksForm'
 import StudentsExamReport from '../screens/Teacher/StudentsExamReport'
 import ReportDetails from '../screens/Teacher/ReportDetails'
+//import GeoLocation from '../screens/GeoLocation'
+//import GeoLocation2 from '../screens/GeoLocation2'
+//import GeoLocation3 from '../screens/GeoLocation3'
 
 export default createAppContainer(
   createStackNavigator({
@@ -45,6 +48,9 @@ export default createAppContainer(
     AddMarks: AddMarks,
     AddMarksForm: AddMarksForm,
     StudentsExamReport: StudentsExamReport,
-    ReportDetails: ReportDetails
+    ReportDetails: ReportDetails,
+    //GeoLocation: GeoLocation,
+    //GeoLocation2: GeoLocation2,
+    //GeoLocation3: GeoLocation3
   })
 );

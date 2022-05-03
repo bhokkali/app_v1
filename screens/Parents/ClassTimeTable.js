@@ -38,7 +38,7 @@ export class ClassTimeTable extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "Time Table",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

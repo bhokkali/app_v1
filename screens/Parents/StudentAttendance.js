@@ -93,7 +93,7 @@ export class StudentAttendance extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "Attendance",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

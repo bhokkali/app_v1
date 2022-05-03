@@ -44,7 +44,7 @@ export class AddAttendance extends React.Component {
 
     static navigationOptions = ({navigation}) => ({
       headerTitle: "Add Attendance",
-      headerRight: (
+      headerRight: () => (
         <HeaderRight navigation={navigation} />
       )
     })

@@ -27,7 +27,7 @@ componentDidMount() {
 
 static navigationOptions = ({navigation}) => ({
   headerTitle: "Circular",
-  headerRight: (
+  headerRight: () => (
     <HeaderRight navigation={navigation} />
   )
 })
